@@ -1,0 +1,13 @@
+*.d.ts
+node_modules
+dist 
+.DS_Store
+cdk.json
+cdk.context.json
+.env
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+.cdk
+yarn-error.log
