@@ -9,4 +9,52 @@ module.exports = {
         ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
         sourceType: "module", // Allows for the use of imports
     },
+    env: {
+        node: true,
+        jest: true,
+    },
+    settings: {
+        "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"],
+        },
+        "import/resolver": {
+            typescript: {
+                directory: "./tsconfig.json",
+            },
+            node: {
+                extensions: [".js", ".jsx", ".ts", ".tsx"],
+            },
+        },
+    },
+    rules: {
+        "sort-imports": [
+            "error",
+            {
+                ignoreCase: false,
+                ignoreDeclarationSort: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+            },
+        ],
+        "max-len": [
+            "warn",
+            {
+                code: 125,
+                ignoreRegExpLiterals: true,
+                ignoreTemplateLiterals: true,
+                ignoreStrings: true,
+                ignoreUrls: true,
+            },
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                vars: "all",
+                args: "after-used",
+                ignoreRestSiblings: true,
+                argsIgnorePattern: "err",
+            },
+        ],
+    },
 };

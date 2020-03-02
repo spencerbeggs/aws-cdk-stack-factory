@@ -1,8 +1,10 @@
-# aws-cdk-stack-factory
+# AWS CDK Stack Factory 🏭
 
-This repo is boilerplate template for building, debugging and deploying [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/home.html) stacks and constructs in [Typescript](https://www.typescriptlang.org/). It works by using a simple file structure to define stacks, optionally pass variables to them from JSON files and proxy commands to the [AWS CDK Toolkit cli](https://docs.aws.amazon.com/cdk/latest/guide/tools.html) from npm/yarn scripts.
+This repo is boilerplate template for building, testing and deploying [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/home.html) stacks and constructs in [Typescript](https://www.typescriptlang.org/). It works by using a simple file structure to define stacks, optionally pass variables to them from JSON files and proxy commands to the [AWS CDK Toolkit cli](https://docs.aws.amazon.com/cdk/latest/guide/tools.html) from npm/yarn scripts.
 
 This repository is a [GitHub template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template), so you can quickly copy it and start tinkering with AWS CDK. Just hit the "Use this template" button on the [this repo's GitHub page](https://github.com/spencerbeggs/aws-cdk-stack-factory).
+
+The walkthrough below will help you understand how to setup and interact with with the system. The stacks, constructs and tests described here are already present in this repository for conveneience. You can remove all the example files and remove references to the boilerplate repo with: `yarn setup`. Documentation on how to use the repo will be available [docs](docs) folder.
 
 ## Setup
 
@@ -26,6 +28,8 @@ AWS_PROFILE=spencer
 AWS_ACCOUNT_ID=7124579443257
 AWS_REGION=us-east-1
 ```
+
+You can also run `yarn env` and a cli will prompt you the values and create the file for you. The `.env` file is not tracked by git.
 
 ### Basic Usage
 
@@ -101,6 +105,92 @@ If you synthesize the private bucket, the output will be functionally the same a
 
 But the the output from the public bucket will be substantially different: `yarn synth poly-bucket public`.
 
-Let's deploy the public stack: `yarn deploy poly-bucket public`. CDK will now create a stacked name `poly-bucket-public` in your account. The env filename is apended with a hypen the the stack name.
+Let's deploy the public stack: `yarn deploy poly-bucket public`. CDK will now create a stacked name `poly-bucket-public` in your account. The env filename is appended with a hypen the the stack name.
 
 To clean up, destroy the stack: `yarn destroy poly-bucket public`.
+
+### Testing Constructs
+
+Using CDK can give you confidence that you are outputing CloudFormation templates that have the correct API. But when you are creating more elaborate stacks or polymorphic constructs, it is helpful to perform unit testing to determine that the resulting template will be configured the way you expect them to be. Breaking your stack into individual constucts and running unit tests on each piece will help you develop faster and save time and money spinning up and tearing down stacks over and over again.
+
+This repo contains a Typescript-compatible [Jest](https://jestjs.io/) setup that can be used with the [@aws-cdk/asset](https://www.npmjs.com/package/@aws-cdk/assert) module. Place your tests inside the `tests` folder and name your test files like `my-construct.test.ts` or `my-construct.sppec.ts`. To run the test suite: `yarn test`
+
+#### Basic Test Exammple
+
+Let's create a basic construct that create as t2.nano EC2 instance in either private or public subnets of a VPC that's id is passed as a prop to the constuct. We would create the file `src/constructs/micro-instance.ts`:
+
+```typescript
+import {
+    AmazonLinuxImage,
+    Instance,
+    InstanceClass,
+    InstanceSize,
+    InstanceType,
+    SubnetType,
+    Vpc,
+} from "@aws-cdk/aws-ec2";
+
+import { Construct } from "@aws-cdk/core";
+
+interface MicroInstanceProps {
+    vpcId: string;
+    private?: boolean;
+}
+
+export class MicroInstance extends Construct {
+    public readonly instance: Instance;
+    public constructor(scope: Construct, id: string, props: MicroInstanceProps) {
+        super(scope, id);
+        const vpc = Vpc.fromLookup(this, "VPC", {
+            vpcId: props.vpcId,
+        });
+        this.instance = new Instance(this, "MicroInstance", {
+            vpc,
+            machineImage: new AmazonLinuxImage(),
+            instanceType: InstanceType.of(InstanceClass.T2, InstanceSize.NANO),
+            vpcSubnets: {
+                subnetType: props.private ? SubnetType.PRIVATE : SubnetType.PUBLIC,
+            },
+        });
+    }
+}
+```
+
+To test all the possible permutations our our constuct we can create a test file `tests/micro-instance.test.ts`:
+
+```typescript
+import { expect as expectCDK, haveResource } from "@aws-cdk/assert";
+
+import { MicroInstance } from "../src/constructs/micro-instance";
+import { Stack } from "@aws-cdk/core";
+// TestApp is a helper class provided by this repo
+import { TestApp } from "../lib/test-app";
+
+describe("MicroInstance", (): void => {
+    let stack: Stack;
+    beforeEach(() => {
+        // Before each test we are going to create a new mock stack
+        ({ stack } = new TestApp());
+    });
+    it("builds an instance in a VPC's public subnets by default", function(): void {
+        // Here we add an instance of our Constuct to the mock stack
+        new MicroInstance(stack, "MictoInstanceTest", {
+            // the vpcId doesn't matter here
+            vpcId: "12345",
+        });
+        // When you use Vpc.fromLookUp method a dummy object is return in testing
+        // the ID of the public subnet is in the format s-12344
+        // that's not documented very well, unfortunatly
+        expectCDK(stack).to(haveResource("AWS::EC2::Instance", { SubnetId: "s-12345" }));
+    });
+    it("builds an instance in a VPC's private subnets if MicroInstanceProps.private is true", function(): void {
+        // Here we add an instance of our Construct with a different configuration to another mock stack
+        new MicroInstance(stack, "MictoInstanceTest", {
+            vpcId: "12345",
+            private: true,
+        });
+        // The private subnet is formatted with p-12345
+        expectCDK(stack).to(haveResource("AWS::EC2::Instance", { SubnetId: "p-12345" }));
+    });
+});
+```
