@@ -1,56 +1,86 @@
-import * as AWS from "aws-sdk";
-
-import { Construct, Lazy } from "@aws-cdk/core";
-import { HostedZone, RecordTarget } from "@aws-cdk/aws-route53";
+import { HostedZone, IHostedZone, RecordTarget } from "@aws-cdk/aws-route53";
 
 import { ARecord } from "@aws-cdk/aws-route53/lib/record-set";
+import { Construct } from "@aws-cdk/core";
+import { IAM } from "aws-sdk";
 
 interface AsyncRoutesProps {
     group: string;
     zoneName: string;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+interface QuerablePromise {
+    isPending?: boolean;
+    isRejected?: boolean;
+    isFulfilled?: boolean;
+    value?: {
+        Users: [IAM.GetUserResponse];
+    };
+    promise?: Promise<void>;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function MakeQuerablePromise(promise: Promise<any>): QuerablePromise {
+    // Set initial state
+    const result: QuerablePromise = {
+        isPending: true,
+        isRejected: false,
+        isFulfilled: false,
+        promise: promise,
+    };
+    // Observe the promise, saving the fulfillment in a closure scope.
+    promise
+        .then(value => {
+            result.value = value;
+            result.isFulfilled = true;
+            result.isPending = false;
+            return;
+        })
+        .catch(err => {
+            result.isRejected = true;
+            result.isPending = false;
+            throw err;
+        });
+    return result;
+}
 
 export class AsyncRoutes extends Construct {
+    private zone: IHostedZone;
     public constructor(scope: Construct, id: string, props: AsyncRoutesProps) {
         super(scope, id);
         const { zoneName, group } = props;
-        const zone = HostedZone.fromLookup(this, "ImportedZone", {
+        this.zone = HostedZone.fromLookup(this, "ImportedZone", {
             domainName: zoneName,
         });
-        console.log("FHHG");
-        const usernames = Lazy.listValue(
-            {
-                produce(context): string[] {
-                    console.log("Hi");
-                    const iam = new AWS.IAM();
-                    const arr: string[] = [];
-                    iam.getGroup(
-                        {
-                            GroupName: group,
-                        },
-                        (err, { Users }) => {
-                            console.log(err);
-                            console.log(Users);
-                            Users.forEach(user => arr.push(user.UserName));
-                            context.resolve(arr);
-                        },
-                    );
-                    while (true) {
-                        if (!context.preparing) {
-                            break;
-                        }
-                    }
-                    return arr;
-                },
-            },
-            { displayHint: "Username", omitEmpty: true },
+        const iam = new IAM();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const req = MakeQuerablePromise(
+            iam
+                .getGroup({
+                    GroupName: group,
+                })
+                .promise(),
         );
-        usernames.forEach(username => {
-            new ARecord(this, `${username}-record`, {
+        console.log(req);
+
+        while (!req.isPending) {
+            if (req.isFulfilled) {
+                break;
+            }
+        }
+        console.log("ff");
+        console.log(req);
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        req.value.Users.forEach((User: any) => {
+            console.log(User);
+            new ARecord(this, `${User.Username}-record`, {
                 target: RecordTarget.fromIpAddresses("123.45.67.8"),
-                zone: zone,
-                recordName: `${username}.${zone.zoneName}`,
+                zone: this.zone,
+                recordName: `${User.Username}.${this.zone.zoneName}`,
             });
+            console.log("ff");
         });
+        console.log("end");
     }
 }

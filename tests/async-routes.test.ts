@@ -5,22 +5,32 @@ import { Stack } from "@aws-cdk/core";
 // TestApp is a helper class that creates a mock app provided by this repo
 import { TestApp } from "../lib/test-app";
 
-jest.mock("aws-sdk", () => ({
-    IAM: function(): object {
-        return {
-            getGroup(): object {
-                return {
+jest.mock("aws-sdk", function() {
+    return {
+        IAM: function(): object {
+            return {
+                getGroup: (): object => ({
                     promise: (): Promise<object> =>
                         Promise.resolve({
-                            Users: [{ UserName: "foo" }, { UserName: "bar" }, { UserName: "baz" }],
+                            Users: [
+                                {
+                                    Username: "foo",
+                                },
+                                {
+                                    Username: "bar",
+                                },
+                                {
+                                    Username: "baz",
+                                },
+                            ],
                         }),
-                };
-            },
-        };
-    },
-}));
+                }),
+            };
+        },
+    };
+});
 
-describe("MicroInstance", (): void => {
+describe("AsyncRoutes", (): void => {
     let stack: Stack;
     beforeEach(() => {
         // Before each test we are going to create a new mock stack
