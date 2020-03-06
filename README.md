@@ -2,11 +2,13 @@
 
 This repo is boilerplate template for building, testing and deploying [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/home.html) stacks and constructs in [Typescript](https://www.typescriptlang.org/). It works by using a simple file structure to define stacks, optionally pass variables to them from JSON files and proxy commands to the [AWS CDK Toolkit cli](https://docs.aws.amazon.com/cdk/latest/guide/tools.html) from npm/yarn scripts.
 
-This repository is a [GitHub template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template), so you can quickly copy it and start tinkering with AWS CDK. Just hit the "Use this template" button on the [this repo's GitHub page](https://github.com/spencerbeggs/aws-cdk-stack-factory).
+This repository is a [GitHub template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template), so you can quickly clone it into your own repo and start tinkering. Just hit the "Use this template" button on the [this repo's GitHub page](https://github.com/spencerbeggs/aws-cdk-stack-factory). You can bootstrap this repository into a ready-to-deploy state with `yarn bootstrap`, but if you are new here, take a mosey through the walk-through to get a hang of it.
 
-The walkthrough below will help you understand how to setup and interact with with the system. The stacks, constructs and tests described here are already present in this repository for conveneience. You can remove all the example files and remove references to the boilerplate repo with: `yarn setup`. Documentation on how to use the repo will be available [docs](docs) folder.
+## Walk-through
 
-## Setup
+The files for the stacks, constructs and tests described here are already present in this repository for conveneience.
+
+### Setup an Env Profile
 
 First you need to install the `cdk` cli globally:
 
@@ -29,7 +31,7 @@ AWS_ACCOUNT_ID=7124579443257
 AWS_REGION=us-east-1
 ```
 
-You can also run `yarn env` and a cli will prompt you the values and create the file for you. The `.env` file is not tracked by git.
+You can also run `yarn profile` and a cli will prompt you the values and create the file for you. The `.env` file is not tracked by git.
 
 ### Basic Usage
 
@@ -115,7 +117,7 @@ Using CDK can give you confidence that you are outputing CloudFormation template
 
 This repo contains a Typescript-compatible [Jest](https://jestjs.io/) setup that can be used with the [@aws-cdk/asset](https://www.npmjs.com/package/@aws-cdk/assert) module. Place your tests inside the `tests` folder and name your test files like `my-construct.test.ts` or `my-construct.sppec.ts`. To run the test suite: `yarn test`
 
-#### Basic Test Exammple
+#### Test Exammple
 
 Let's create a basic construct that create as t2.nano EC2 instance in either private or public subnets of a VPC that's id is passed as a prop to the constuct. We would create the file `src/constructs/micro-instance.ts`:
 
