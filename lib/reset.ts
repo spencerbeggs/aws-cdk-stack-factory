@@ -29,7 +29,7 @@ async function main(): Promise<void> {
         delete pkg.description;
     }
     pkg.version = VERSION;
-    pkg.repository.url = `https://github.com/${remote.replace("git@github.com:", "")}`;
+    pkg.repository.url = `https://github.com/${remote.replace("git@github.com:", "").trim()}`;
     console.log(pkg);
     //await emptyDir(path("../envs"));
     //await emptyDir(path("../src/stacks"));

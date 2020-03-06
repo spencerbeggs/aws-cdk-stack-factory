@@ -2267,15 +2267,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bent@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/bent/-/bent-7.1.0.tgz#4d1ee379259e40ef39e4a8f80fc97ab07f43185b"
-  integrity sha512-oTkDz8lBsk+HQjJPVeHHejkse/PDaTFwTFVasoR1V3XEQw23KKdfNvRln3M9++qipIBObqVyhsvSGuquFebDvQ==
-  dependencies:
-    bytesish "^0.4.1"
-    caseless "~0.12.0"
-    is-stream "^2.0.0"
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -2346,11 +2337,6 @@ buffer@4.9.1:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
-
-bytesish@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/bytesish/-/bytesish-0.4.1.tgz#5fe19b076037ffdfb63e083a53495b1d1c063f6f"
-  integrity sha512-j3l5QmnAbpOfcN/Z2Jcv4poQYfefs8rDdcbc6iEKm+OolvUXAE2APodpWj+DOzqX6Bl5Ys1cQkcIV2/doGvQxg==
 
 cache-base@^1.0.1:
   version "1.0.1"
@@ -4267,7 +4253,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
+json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
@@ -4639,16 +4625,6 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-nock@^12.0.2:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-12.0.2.tgz#47617b34738e026b29d2294b4579e35b27e6a4d3"
-  integrity sha512-pTckyfP8QHvwXP/oX+zQuSIL3S/mWTd84ba4pOGZlS/FgRZyljv4C3ZyOjgMilvkydSaERML/aJEF13EBUuDTQ==
-  dependencies:
-    debug "^4.1.0"
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.13"
-    propagate "^2.0.0"
-
 node-int64@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
@@ -4986,11 +4962,6 @@ prompts@^2.0.1:
   dependencies:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
-
-propagate@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/propagate/-/propagate-2.0.1.tgz#40cdedab18085c792334e64f0ac17256d38f9a45"
-  integrity sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
 
 pseudomap@^1.0.2:
   version "1.0.2"
