@@ -16,6 +16,7 @@
         "jest": "npx jest --coverage false",
         "metadata": "ts-node lib/index.ts",
         "push": "ts-node lib/index.ts",
+        "reset": "ts-node lib/reset.ts",
         "synth": "ts-node lib/index.ts",
         "synthesize": "ts-node lib/index.ts",
         "test": "npx jest"
@@ -32,6 +33,7 @@
         "aws-sdk": "^2.630.0",
         "bent": "^7.1.0",
         "chalk": "^3.0.0",
+        "child-process-promise": "^2.2.1",
         "dotenv": "^8.2.0",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.10.0",
@@ -187,7 +189,8 @@
         "@aws-cdk/core": "^1.26.0",
         "@aws-cdk/custom-resources": "^1.26.0",
         "@aws-cdk/cx-api": "^1.26.0",
-        "@aws-cdk/region-info": "^1.26.0"
+        "@aws-cdk/region-info": "^1.26.0",
+        "@types/child-process-promise": "^2.2.1"
     },
     "husky": {
         "hooks": {
