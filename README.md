@@ -163,7 +163,7 @@ import { expect as expectCDK, haveResource } from "@aws-cdk/assert";
 
 import { MicroInstance } from "../src/constructs/micro-instance";
 import { Stack } from "@aws-cdk/core";
-// TestApp is a helper class provided by this repo
+// TestApp is a helper class that creates a mock app provided by this repo
 import { TestApp } from "../lib/test-app";
 
 describe("MicroInstance", (): void => {
