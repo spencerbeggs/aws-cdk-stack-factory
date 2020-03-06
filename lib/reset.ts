@@ -1,3 +1,4 @@
+import * as chalk from "chalk";
 import * as inquirer from "inquirer";
 
 import { exec } from "child-process-promise";
@@ -14,14 +15,13 @@ async function run(cmd: string): Promise<string> {
 }
 
 async function main(): Promise<void> {
+    console.log(`📦 ${chalk.green("Update package.json with your project setting:")}`);
+    const pkg = await readJson(path("../package.json"));
     const { NAME, DESCRIPTION, VERSION } = await inquirer.prompt([
         { type: "input", name: "NAME", message: "name:", default: "my-stack" },
         { type: "input", name: "DESCRIPTION", message: "description:", default: "" },
         { type: "input", name: "VERSION", message: "version:", default: "0.0.0" },
     ]);
-    const remote = await run("git config --get remote.origin.url");
-    console.log(remote);
-    const pkg = await readJson(path("../package.json"));
     pkg.name = NAME;
     if (DESCRIPTION) {
         pkg.description = DESCRIPTION;
@@ -29,7 +29,54 @@ async function main(): Promise<void> {
         delete pkg.description;
     }
     pkg.version = VERSION;
-    pkg.repository.url = `https://github.com/${remote.replace("git@github.com:", "").trim()}`;
+    let remote = null;
+    let repoDefault = "";
+    try {
+        remote = await run("git config --get remote.origin.url");
+        if (remote.startsWith("git@github.com:")) {
+            repoDefault = `https://github.com/${remote.replace("git@github.com:", "").trim()}`;
+        }
+    } catch {}
+    const { REPO_URL } = await inquirer.prompt([
+        {
+            type: "input",
+            name: "REPO_URL",
+            message: "repo url:",
+            default: repoDefault,
+        },
+    ]);
+    if (REPO_URL) {
+        pkg.repository.url = REPO_URL;
+    } else {
+        delete pkg.repository;
+    }
+    let authorDefault = "";
+    try {
+        const authorName = await run("git config user.name");
+        authorDefault = authorName.trim();
+    } catch {}
+    try {
+        let authorEmail = await run("git config user.email");
+        authorEmail = authorEmail.trim();
+        if (!authorDefault) {
+            authorDefault = authorEmail;
+        } else {
+            authorDefault = `${authorDefault} <${authorEmail}>`;
+        }
+    } catch {}
+    const { AUTHOR } = await inquirer.prompt([
+        {
+            type: "input",
+            name: "AUTHOR",
+            message: "author",
+            default: authorDefault,
+        },
+    ]);
+    if (AUTHOR) {
+        pkg.author = AUTHOR;
+    } else {
+        delete pkg.author;
+    }
     console.log(pkg);
     //await emptyDir(path("../envs"));
     //await emptyDir(path("../src/stacks"));

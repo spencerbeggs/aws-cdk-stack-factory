@@ -3,10 +3,12 @@
     "description": "A boilerplate template for building, testing and deploying AWS CDK stacks and constructs with a Node.js cli.",
     "version": "1.0.0",
     "license": "MIT",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/spencerbeggs/aws-cdk-stack-factory.git"
     },
+    "author": "C. Spencer Beggs <spencer@beg.gs>",
     "scripts": {
         "deploy": "ts-node lib/index.ts",
         "destroy": "ts-node lib/index.ts",
