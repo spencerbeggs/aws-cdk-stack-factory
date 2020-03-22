@@ -45,7 +45,7 @@
         "eslint-plugin-prettier": "^3.1.2",
         "fs-extra": "^8.1.0",
         "husky": "^4.2.3",
-        "inquirer": "^7.0.5",
+        "inquirer": "^7.1.0",
         "jest": "^25.1.0",
         "lint-staged": "^10.0.8",
         "lodash": "^4.17.15",
