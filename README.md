@@ -12,3 +12,11 @@ If you are new here, [read the documentation](docs):
 - [Creating Stacks and Constructs](docs/usage)
 - [Testing Your Code](docs/testing)
 - [Workflow Helpers](docs/workflow)
+
+## Help Improve AWS CDK
+
+If you love working with AWS CDK, you can use this repo to help the [team building CDK](https://github.com/aws/aws-cdk) improve it. Bootstrap this  repo and setup stacks and constructs and with tests to show the team any issues you encounter. They are very friendly and responsive to bug reports and feature requests. Do your part and provide them with tests cases when you file issues.
+
+## Credits and Contributing
+
+This repo borrows from and builds upon many of the ideas from the [Open CDK Guide](https://github.com/kevinslin/open-cdk). If you want to imporove this tempalte, please open an issue or pull request.
