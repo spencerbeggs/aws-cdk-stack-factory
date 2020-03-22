@@ -1272,10 +1272,10 @@
   dependencies:
     "@aws-cdk/core" "1.26.0"
 
-"@aws-cdk/cdk-assets-schema@^1.26.0":
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.26.0.tgz#438fd14f5ee3ba3d36ed84eb2a86cc03e217adb8"
-  integrity sha512-7Lgm8qAIHdmI4js16GmVXoiyFA9J60R2KKpePlETB2eOI7AS/9UaYBcAWnEyZFA3VuvK7qVgzDZA3Mj8Iasc+Q==
+"@aws-cdk/cdk-assets-schema@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.30.0.tgz#7f8cd84ecab66d13c3a74169bddbbce3f223638b"
+  integrity sha512-6rWNG4oqlfNzDB+InPtPEb5qGi/hlTdy5WQH4VtORiGi5QQFnLwmtY6n7nUd6RjBCShbOLxWCh9imkKpy87dKA==
   dependencies:
     semver "^7.1.3"
 
