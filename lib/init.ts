@@ -10,7 +10,7 @@ import { APP_ENV, STACK } from "./env";
 import { Tag } from "@aws-cdk/core";
 
 const hasEnv = !["default", undefined].includes(APP_ENV);
-const STACK_NAME = hasEnv ? STACK : `${STACK}-${APP_ENV}`;
+const STACK_NAME = hasEnv ? `${STACK}-${APP_ENV}` : STACK;
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { TargetStack } = require(`../src/stacks/${STACK}`);
