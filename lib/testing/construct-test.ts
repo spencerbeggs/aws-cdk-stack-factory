@@ -20,7 +20,7 @@ describe("MyConstruct", (): void => {
         new MyConstruct(stack, "MyConstruct", {});
         // You must expect on the wrapper function before stack is available for inspection
         expect(fn).not.toThrow();
-        // Nowt you can examine the resulting stack
+        // Now you can examine the resulting stack
         expectCDK(stack).to(countResources("*", 0));
     });
 });
