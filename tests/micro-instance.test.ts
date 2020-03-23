@@ -11,7 +11,7 @@ describe("MicroInstance", (): void => {
         // Before each test we are going to create a new mock stack
         ({ stack } = new TestApp());
     });
-    it("builds an instance in a VPC's public subnets by default", function(): void {
+    it("builds an instance in a VPC's public subnets by default", function (): void {
         // Here we add an instance of our Constuct to the mock stack
         new MicroInstance(stack, "MictoInstanceTest", {
             // the vpcId doesn't matter here
@@ -22,7 +22,7 @@ describe("MicroInstance", (): void => {
         // that's not documented very well, unfortunatly
         expectCDK(stack).to(haveResource("AWS::EC2::Instance", { SubnetId: "s-12345" }));
     });
-    it("builds an instance in a VPC's private subnets if MicroInstanceProps.private is true", function(): void {
+    it("builds an instance in a VPC's private subnets if MicroInstanceProps.private is true", function (): void {
         // Here we add an instance of our Construct with a different configuration to another mock stack
         new MicroInstance(stack, "MictoInstanceTest", {
             vpcId: "12345",

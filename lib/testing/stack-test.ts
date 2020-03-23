@@ -18,7 +18,7 @@ describe("MyStack", (): void => {
             stack = new TargetStack(app, "MyStack");
         };
     });
-    it("the stack synthesizes", function(): void {
+    it("the stack synthesizes", function (): void {
         // You must expect on the wrapper function before stack is available for inspection
         expect(fn).not.toThrow();
         // Now you can examine the resulting stack

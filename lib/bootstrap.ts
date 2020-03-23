@@ -48,7 +48,7 @@ export async function makeProfile(): Promise<boolean> {
     `
         .trimLeft()
         .split("\n")
-        .map(line => line.trim())
+        .map((line) => line.trim())
         .join("\n");
     await writeFile(path("../.env"), envFile);
     return true;
