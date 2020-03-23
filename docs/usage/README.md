@@ -23,7 +23,7 @@ To deploy the stack: `yarn deploy plain-bucket`. CDK will now create a stacked n
 
 To clean up, destroy the stack: `yarn destroy plain-bucket`.
 
-### Polymorphic Stacks
+## Polymorphic Stacks
 
 Many times will want to create a single stack that accepts options. For example, you may want to create a stack that creates an EC2 instance, but you want it to be different sizes when you deploy it to you your staging or production environments. Let's create a stack similar to the one above, but let's toggle whether the S3 bucket above can be public or not. We will call it `poly-bucket`.
 

@@ -1,12 +1,12 @@
 # Building and Testing Constructs
 
-Using CDK can give you confidence that you are outputing CloudFormation templates that have the correct API. But when you are creating more elaborate stacks or polymorphic constructs, it is helpful to perform unit testing to determine that the resulting template will be configured the way you expect them to be. Breaking your stack into individual constructs and running unit tests on each piece will help you develop faster and save time and money spinning up and tearing down stacks over and over again.
+Using CDK can give you confidence that you are outputting CloudFormation templates that have the correct API. But when you are creating more elaborate stacks or polymorphic constructs, it is helpful to perform unit testing to determine that the resulting template will be configured the way you expect them to be. Breaking your stack into individual constructs and running unit tests on each piece will help you develop faster and save time and money spinning up and tearing down stacks over and over again.
 
 This repo contains a Typescript-compatible [Jest](https://jestjs.io/) setup that can be used with the [@aws-cdk/asset](https://www.npmjs.com/package/@aws-cdk/assert) module. Place your tests inside the `tests` folder and name your test files like `my-construct.test.ts` or `my-construct.spec.ts`.
 
 To run the test suite: `yarn test`
 
-## Test Exammple
+## Test Example
 
 Let's create a basic construct that creates a t2.nano EC2 instance in either private or public subnets of a VPC that's id is passed as a prop to the constuct. We would create the file `src/constructs/micro-instance.ts`:
 
