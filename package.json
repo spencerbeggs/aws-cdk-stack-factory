@@ -150,7 +150,7 @@
         "@aws-cdk/aws-medialive": "^1.30.0",
         "@aws-cdk/aws-mediastore": "^1.30.0",
         "@aws-cdk/aws-msk": "^1.30.0",
-        "@aws-cdk/aws-neptune": "^1.30.0",
+        "@aws-cdk/aws-neptune": "^1.31.0",
         "@aws-cdk/aws-opsworks": "^1.30.0",
         "@aws-cdk/aws-opsworkscm": "^1.30.0",
         "@aws-cdk/aws-pinpoint": "^1.30.0",
