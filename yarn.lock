@@ -1040,13 +1040,13 @@
     "@aws-cdk/core" "1.30.0"
     constructs "^1.1.2"
 
-"@aws-cdk/aws-neptune@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-neptune/-/aws-neptune-1.30.0.tgz#c40e7a3c92bf8aef42b4533068ebb2ee4c2462c7"
-  integrity sha512-1sNudut78lD2QndEJ/mEuoaoJlGThF/sn+iD1J5+J9DpTftDiS2P46xkL0yyihLDy6EZqaJ/YI7r2qEL+S1yFg==
+"@aws-cdk/aws-neptune@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-neptune/-/aws-neptune-1.31.0.tgz#e664eca783b7c2e9a40b358e187ef6433462850f"
+  integrity sha512-5rcy6tPkULbYn0oY8iFXbbb+9eGifRxP8gBP1h6mJVeYWRj5es5KXpjBhQDhyd7tgjK9NB8D07mpyQYk5IVn5w==
   dependencies:
-    "@aws-cdk/core" "1.30.0"
-    constructs "^1.1.2"
+    "@aws-cdk/core" "1.31.0"
+    constructs "^2.0.0"
 
 "@aws-cdk/aws-opsworks@^1.30.0":
   version "1.30.0"
