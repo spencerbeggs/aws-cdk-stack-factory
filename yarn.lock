@@ -132,13 +132,13 @@
     "@aws-cdk/core" "1.30.0"
     constructs "^1.1.2"
 
-"@aws-cdk/aws-appstream@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-appstream/-/aws-appstream-1.30.0.tgz#66d2d506d5b5ab731ca77f0aaef5eddbd8f89fd6"
-  integrity sha512-xhRaitcpiSVwR2uD0YRDcSZoNVXDvK0DqGzpuDua6BB4AkRC8Kq3tyhK6KCIe/pt5sNz93fdoUjSnXIwVandMQ==
+"@aws-cdk/aws-appstream@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-appstream/-/aws-appstream-1.31.0.tgz#37c92ed6ac6448dfbec57c324c6de741681fa7cf"
+  integrity sha512-mIVGW77OGNc5PJv1YXBGP/Y6VG8V7DnytBzkQ/ojaLDyb0DXCIebpIlo2EJeuwByPj8CBGQ+JANb+eH8y55P4w==
   dependencies:
-    "@aws-cdk/core" "1.30.0"
-    constructs "^1.1.2"
+    "@aws-cdk/core" "1.31.0"
+    constructs "^2.0.0"
 
 "@aws-cdk/aws-appsync@^1.30.0":
   version "1.30.0"
