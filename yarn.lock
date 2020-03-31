@@ -688,13 +688,13 @@
     "@aws-cdk/core" "1.30.0"
     constructs "^1.1.2"
 
-"@aws-cdk/aws-elasticsearch@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-elasticsearch/-/aws-elasticsearch-1.30.0.tgz#c70dfd42295e65e13b677a09c5e84215f4b931ab"
-  integrity sha512-c++xH7+N6RI1FTW0h6Xy8jOhanUmEWmEjFngCYwcbj0AL+q9QVk6ua9dowYg+eP/Zv87g4QzupvgRXRY//MAWQ==
+"@aws-cdk/aws-elasticsearch@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-elasticsearch/-/aws-elasticsearch-1.31.0.tgz#0510c60388a8f75798000033a8deb1be730f8497"
+  integrity sha512-MbZeEahFkBY0IKTABBjyarcF8Og/n9zdyJvDZocYpMAgFYBnLznMoW/Y1wEEV+wHIjexcp7HLycc6KVO4wiy+g==
   dependencies:
-    "@aws-cdk/core" "1.30.0"
-    constructs "^1.1.2"
+    "@aws-cdk/core" "1.31.0"
+    constructs "^2.0.0"
 
 "@aws-cdk/aws-emr@^1.30.0":
   version "1.30.0"
