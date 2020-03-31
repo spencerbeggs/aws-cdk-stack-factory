@@ -14,6 +14,10 @@ This repo is setup with automatic [Dependabot](https://github.com/marketplace/de
 
 This repo integrates [Husky](https://www.npmjs.com/package/husky), which will run [Git commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) on every commit. It will automatically lint and format your code if it can but fail if it cannot. If this is too strict and tripping you up, you can disable it by removing the `husky` and `lint-staged` properties in `package.json`. You can also run `yarn disable hooks`.
 
+## GitHub Actions
+
+This repo has basic [GitHub Action](https://help.github.com/en/actions) integrated for pull requests into the master branch. When a pull requests is created or a push is made into a branch with a pending pull request the lint and test scripts are run.
+
 ## VSCode Integration
 
 This repo contains [VSCode Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings) along with reccomended extentions. If you install the exetntions you code will be formatted and linted as you work. You can modify the settings in JSON files the `.vscode` folder. You can disable it compeletly by deelting the folder or running `yarn disable vscode`.
