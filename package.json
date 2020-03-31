@@ -177,7 +177,7 @@
         "@aws-cdk/aws-servicediscovery": "^1.30.0",
         "@aws-cdk/aws-ses": "^1.30.0",
         "@aws-cdk/aws-ses-actions": "^1.30.0",
-        "@aws-cdk/aws-sns": "^1.30.0",
+        "@aws-cdk/aws-sns": "^1.31.0",
         "@aws-cdk/aws-sns-subscriptions": "^1.30.0",
         "@aws-cdk/aws-sqs": "^1.30.0",
         "@aws-cdk/aws-ssm": "^1.30.0",
