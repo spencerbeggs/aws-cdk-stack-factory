@@ -53,13 +53,13 @@
     "@aws-cdk/core" "1.30.0"
     constructs "^1.1.2"
 
-"@aws-cdk/aws-acmpca@^1.30.0":
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-acmpca/-/aws-acmpca-1.30.0.tgz#f215f8c97e7c6162d54bb1db458509e0fa5cd5ea"
-  integrity sha512-8z5OO3PbLt7hGQv7EsnZquC+ejwz5ohBa2H9Pq+JPL8LFp+NTBjzijwz9Y6beD5CkhYbY54DfxVsTXiI3OiXYw==
+"@aws-cdk/aws-acmpca@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-acmpca/-/aws-acmpca-1.31.0.tgz#66e3c71e3cc14e7148590b5d5dd906021637a738"
+  integrity sha512-PR4bBYcp6LJgRBZXKedD3APuArUeqKwi4ClnDMLeuC21v8Ugq90BT9kRCpEdfUGrzenin3M6xxvvU9q1WbheXw==
   dependencies:
-    "@aws-cdk/core" "1.30.0"
-    constructs "^1.1.2"
+    "@aws-cdk/core" "1.31.0"
+    constructs "^2.0.0"
 
 "@aws-cdk/aws-amazonmq@^1.30.0":
   version "1.30.0"
