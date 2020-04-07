@@ -36,7 +36,7 @@
         "@typescript-eslint/eslint-plugin": "^2.26.0",
         "@typescript-eslint/parser": "^2.26.0",
         "aws-sdk": "^2.655.0",
-        "chalk": "^3.0.0",
+        "chalk": "^4.0.0",
         "change-case": "^4.1.1",
         "child-process-promise": "^2.2.1",
         "dotenv": "^8.2.0",
@@ -46,7 +46,7 @@
         "fs-extra": "^9.0.0",
         "husky": "^4.2.3",
         "inquirer": "^7.1.0",
-        "jest": "^25.2.4",
+        "jest": "^25.2.7",
         "lint-staged": "^10.1.2",
         "lodash": "^4.17.15",
         "prettier": "^2.0.2",
@@ -193,6 +193,6 @@
         "@aws-cdk/custom-resources": "^1.31.0",
         "@aws-cdk/cx-api": "^1.31.0",
         "@aws-cdk/region-info": "^1.31.0",
-        "constructs": "^2.0.0"
+        "constructs": "^2.0.1"
     }
 }
