@@ -1,8 +1,12 @@
 module.exports = {
-    semi: true,
-    trailingComma: "all",
-    singleQuote: false,
-    printWidth: 120,
-    tabWidth: 4,
-    disabledLanguage: ["markdown"],
+	useTabs: true,
+	tabWidth: 2,
+	trailingComma: "all",
+	printWidth: 125,
+	overrides: [
+		{
+			files: ".prettierrc.js",
+			options: { parser: "json" },
+		},
+	],
 };

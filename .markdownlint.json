@@ -1,5 +1,5 @@
 {
-    "default": true,
-    "no-hard-tabs": false,
-    "line_length": false
+	"default": true,
+	"no-hard-tabs": false,
+	"line_length": false
 }
