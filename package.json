@@ -193,6 +193,6 @@
         "@aws-cdk/custom-resources": "^1.31.0",
         "@aws-cdk/cx-api": "^1.31.0",
         "@aws-cdk/region-info": "^1.31.0",
-        "constructs": "^2.0.0"
+        "constructs": "^2.0.1"
     }
 }
