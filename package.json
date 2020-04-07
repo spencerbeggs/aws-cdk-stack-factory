@@ -46,7 +46,7 @@
         "fs-extra": "^9.0.0",
         "husky": "^4.2.3",
         "inquirer": "^7.1.0",
-        "jest": "^25.2.4",
+        "jest": "^25.2.7",
         "lint-staged": "^10.1.2",
         "lodash": "^4.17.15",
         "prettier": "^2.0.2",
