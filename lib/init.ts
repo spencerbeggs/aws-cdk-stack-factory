@@ -19,10 +19,10 @@ import cdk = require("@aws-cdk/core");
 
 const app = new cdk.App();
 const stack = new TargetStack(app, STACK_NAME, {
-    env: {
-        account: process.env.AWS_ACCOUNT_ID,
-        region: process.env.AWS_REGION,
-    },
+	env: {
+		account: process.env.AWS_ACCOUNT_ID,
+		region: process.env.AWS_REGION,
+	},
 });
 Tag.add(stack, "app", STACK);
 Tag.add(stack, "env", hasEnv ? APP_ENV : "production");

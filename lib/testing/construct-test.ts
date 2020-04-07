@@ -6,21 +6,21 @@ import { Stack } from "@aws-cdk/core";
 import { TestApp } from "../../lib/test-app";
 
 describe("MyConstruct", (): void => {
-    let stack: Stack;
-    let fn: Function;
+	let stack: Stack;
+	let fn: Function;
 
-    beforeEach(() => {
-        // Before each test we are going to create a new mock stack
-        fn = (): void => {
-            ({ stack } = new TestApp());
-        };
-    });
-    it("the construct synthesizes", () => {
-        // add your construct to the stack
-        new MyConstruct(stack, "MyConstruct", {});
-        // You must expect on the wrapper function before stack is available for inspection
-        expect(fn).not.toThrow();
-        // Now you can examine the resulting stack
-        expectCDK(stack).to(countResources("*", 0));
-    });
+	beforeEach(() => {
+		// Before each test we are going to create a new mock stack
+		fn = (): void => {
+			({ stack } = new TestApp());
+		};
+	});
+	it("the construct synthesizes", () => {
+		// add your construct to the stack
+		new MyConstruct(stack, "MyConstruct", {});
+		// You must expect on the wrapper function before stack is available for inspection
+		expect(fn).not.toThrow();
+		// Now you can examine the resulting stack
+		expectCDK(stack).to(countResources("*", 0));
+	});
 });
