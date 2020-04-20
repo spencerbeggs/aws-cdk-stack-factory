@@ -1407,12 +1407,12 @@
     "@aws-cdk/core" "1.32.1"
     constructs "^2.0.0"
 
-"@aws-cdk/cdk-assets-schema@^1.32.1":
-  version "1.32.1"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.32.1.tgz#4c543fbf7cf2797b025a5ca8e7043949ad11b6b8"
-  integrity sha512-55nLJAddDvHsxCnIUcoPMcvTPFmnT5vaiRVJ3HM3RQFDfNJ3myQWbmL6Slosh86hs9ynDT/zJzHMd/1CapivOQ==
+"@aws-cdk/cdk-assets-schema@^1.33.1":
+  version "1.33.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.33.1.tgz#31d8c4d31de76d31390f1a035a670e9bb0169e59"
+  integrity sha512-yTM16bDyVE4gbBHfOBg761CH9LVJZwSY97TFWPfB/0m9//mxm0T3WuK5uM3pARAFddvcY1OlV7uW7jWMtICxOw==
   dependencies:
-    semver "^7.2.1"
+    semver "^7.3.2"
 
 "@aws-cdk/cfnspec@1.32.1":
   version "1.32.1"
@@ -5373,10 +5373,10 @@ semver@^5.4.1, semver@^5.5.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
-semver@^7.2.1:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.2.1.tgz#d997aa36bdbb00b501ae4ac4c7d17e9f7a587ae5"
-  integrity sha512-aHhm1pD02jXXkyIpq25qBZjr3CQgg8KST8uX0OWXch3xE6jw+1bfbWnCjzMwojsTquroUmKFHNzU6x26mEiRxw==
+semver@^7.2.1, semver@^7.3.2:
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
+  integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
 
 sentence-case@^3.0.3:
   version "3.0.3"

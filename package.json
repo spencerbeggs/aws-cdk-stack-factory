@@ -187,7 +187,7 @@
 		"@aws-cdk/aws-wafregional": "^1.32.1",
 		"@aws-cdk/aws-wafv2": "^1.32.1",
 		"@aws-cdk/aws-workspaces": "^1.32.1",
-		"@aws-cdk/cdk-assets-schema": "^1.32.1",
+		"@aws-cdk/cdk-assets-schema": "^1.33.1",
 		"@aws-cdk/core": "^1.32.1",
 		"@aws-cdk/custom-resources": "^1.32.1",
 		"@aws-cdk/cx-api": "^1.32.1",
