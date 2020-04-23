@@ -1,7 +1,7 @@
 {
 	"name": "aws-cdk-stack-factory",
 	"description": "A boilerplate template for building, testing and deploying AWS CDK stacks and constructs with a Node.js cli.",
-	"version": "1.2.1",
+	"version": "1.3.0",
 	"license": "MIT",
 	"private": true,
 	"repository": {
