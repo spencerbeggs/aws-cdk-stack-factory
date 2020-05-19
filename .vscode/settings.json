@@ -1,5 +1,6 @@
 {
 	"eslint.enable": true,
+	"deno.enable": false,
 	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll.markdownlint": true,
@@ -18,5 +19,8 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"prettier.configPath": ".prettierrc.js",
-	"prettier.disableLanguages": ["markdown"]
+	"prettier.disableLanguages": [
+		"markdown"
+	],
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
