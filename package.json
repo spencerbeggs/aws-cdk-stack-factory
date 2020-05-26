@@ -200,7 +200,7 @@
 		"@aws-cdk/aws-wafregional": "^1.39.0",
 		"@aws-cdk/aws-wafv2": "^1.39.0",
 		"@aws-cdk/aws-workspaces": "^1.39.0",
-		"@aws-cdk/cfnspec": "^1.39.0",
+		"@aws-cdk/cfnspec": "^1.41.0",
 		"@aws-cdk/cloud-assembly-schema": "^1.39.0",
 		"@aws-cdk/cloudformation-diff": "^1.39.0",
 		"@aws-cdk/cloudformation-include": "^1.39.0",
