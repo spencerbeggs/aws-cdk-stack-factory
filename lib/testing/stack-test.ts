@@ -8,7 +8,7 @@ import { TestApp } from "../test-app";
 describe("MyStack", (): void => {
 	let app: App;
 	let stack: Stack;
-	let fn: Function;
+	let fn: () => void;
 	beforeEach(() => {
 		// Before each test we are going to create a new mock app for our stack
 		// and generate a new test stack, it is wrapped in a lambda function

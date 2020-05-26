@@ -7,7 +7,7 @@ import { TestApp } from "../../lib/test-app";
 
 describe("MyConstruct", (): void => {
 	let stack: Stack;
-	let fn: Function;
+	let fn: () => void;
 
 	beforeEach(() => {
 		// Before each test we are going to create a new mock stack
