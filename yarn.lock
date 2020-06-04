@@ -1524,10 +1524,17 @@
   dependencies:
     semver "^7.2.2"
 
-"@aws-cdk/cfnspec@1.42.0", "@aws-cdk/cfnspec@^1.42.0":
+"@aws-cdk/cfnspec@1.42.0":
   version "1.42.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.42.0.tgz#4bbcc2f018284c736a9da963fb538b122f477c88"
   integrity sha512-HS8Crs0/bvT6d2STd5P6hTCjmr0b7eCse5XIHS6fqUozlD2OxG+TwxpinS+j+9qhz5QHVnSQ/q7N/D0SP3VTzg==
+  dependencies:
+    md5 "^2.2.1"
+
+"@aws-cdk/cfnspec@^1.43.0":
+  version "1.43.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.43.0.tgz#b13e2e9c32684095f9d586924bb49e4fdb857731"
+  integrity sha512-CcVb2icN6GVSXelYA9vYMHCy0bU68t5m1bZghYZFavhJVtq1ZL3gMLVMZ9R0O7Nc1zKk7xUkXnj0Ljt7SgTb0Q==
   dependencies:
     md5 "^2.2.1"
 
