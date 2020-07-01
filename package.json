@@ -205,7 +205,7 @@
 		"@aws-cdk/cdk-assets-schema": "^1.46.0",
 		"@aws-cdk/cfnspec": "^1.46.0",
 		"@aws-cdk/cloud-assembly-schema": "^1.46.0",
-		"@aws-cdk/cloudformation-diff": "^1.46.0",
+		"@aws-cdk/cloudformation-diff": "^1.47.1",
 		"@aws-cdk/cloudformation-include": "^1.46.0",
 		"@aws-cdk/core": "^1.46.0",
 		"@aws-cdk/custom-resources": "^1.46.0",
