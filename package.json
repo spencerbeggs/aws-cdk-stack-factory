@@ -203,7 +203,7 @@
 		"@aws-cdk/aws-wafv2": "^1.46.0",
 		"@aws-cdk/aws-workspaces": "^1.46.0",
 		"@aws-cdk/cdk-assets-schema": "^1.46.0",
-		"@aws-cdk/cfnspec": "^1.46.0",
+		"@aws-cdk/cfnspec": "^1.48.0",
 		"@aws-cdk/cloud-assembly-schema": "^1.46.0",
 		"@aws-cdk/cloudformation-diff": "^1.46.0",
 		"@aws-cdk/cloudformation-include": "^1.46.0",
