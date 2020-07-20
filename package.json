@@ -42,7 +42,7 @@
 		"change-case": "^4.1.1",
 		"child-process-promise": "^2.2.1",
 		"dotenv": "^8.2.0",
-		"eslint": "^7.4.0",
+		"eslint": "^7.5.0",
 		"eslint-config-prettier": "^6.11.0",
 		"eslint-plugin-prettier": "^3.1.4",
 		"fs-extra": "^9.0.1",
