@@ -1534,10 +1534,10 @@
     "@aws-cdk/core" "1.54.0"
     constructs "^3.0.2"
 
-"@aws-cdk/cdk-assets-schema@^1.54.0":
-  version "1.54.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.54.0.tgz#5f8ab3ceb0b296a716b54bd7e9891166170b2d0a"
-  integrity sha512-X12I7/Y/iVOIVe74oDUyOQtRobT9GZAle488BqAdnHIzNF+6i4dIo1WJW/2oTPm2RdEd8BM8euNX8uozI+K5wQ==
+"@aws-cdk/cdk-assets-schema@^1.55.0":
+  version "1.55.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.55.0.tgz#181fb34ca34d5d41820ca1085debda8bf854c620"
+  integrity sha512-rrHSAdTWtc7XjF/G0PSqqUfFjrA33IJ4puF6Crfufrz9gHD6Tt4idoR+0fMgA19sL/RgNkzxLBc9nIvaM6ik9A==
 
 "@aws-cdk/cfnspec@1.54.0", "@aws-cdk/cfnspec@^1.54.0":
   version "1.54.0"
