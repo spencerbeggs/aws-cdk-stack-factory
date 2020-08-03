@@ -202,7 +202,7 @@
 		"@aws-cdk/aws-wafregional": "^1.54.0",
 		"@aws-cdk/aws-wafv2": "^1.54.0",
 		"@aws-cdk/aws-workspaces": "^1.54.0",
-		"@aws-cdk/cdk-assets-schema": "^1.54.0",
+		"@aws-cdk/cdk-assets-schema": "^1.56.0",
 		"@aws-cdk/cfnspec": "^1.54.0",
 		"@aws-cdk/cloud-assembly-schema": "^1.54.0",
 		"@aws-cdk/cloudformation-diff": "^1.54.0",
