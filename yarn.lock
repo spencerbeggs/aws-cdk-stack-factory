@@ -1539,10 +1539,17 @@
   resolved "https://registry.yarnpkg.com/@aws-cdk/cdk-assets-schema/-/cdk-assets-schema-1.54.0.tgz#5f8ab3ceb0b296a716b54bd7e9891166170b2d0a"
   integrity sha512-X12I7/Y/iVOIVe74oDUyOQtRobT9GZAle488BqAdnHIzNF+6i4dIo1WJW/2oTPm2RdEd8BM8euNX8uozI+K5wQ==
 
-"@aws-cdk/cfnspec@1.54.0", "@aws-cdk/cfnspec@^1.54.0":
+"@aws-cdk/cfnspec@1.54.0":
   version "1.54.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.54.0.tgz#48a0c8a38648894b495eaf8b133c634f9b1e26e6"
   integrity sha512-0cel4Z9K3MZfMLuzapGN6qKTv15vQkDb/DMGRMJe7P4h/pkJHYbROv/uiWXx+b5uCUQxLjJYCxnJlJbK0tK8wA==
+  dependencies:
+    md5 "^2.2.1"
+
+"@aws-cdk/cfnspec@^1.57.0":
+  version "1.57.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.57.0.tgz#57ce94fd4f1475617358a940b957795d27ccbd14"
+  integrity sha512-UEMmFYCtZuYvRLAkHtMqdhI0ziJA+SYT9o+BeYaVEbpibAYes9ILjEeeigdoJnYwbsCEqGclpKKTQHE7VvsiXA==
   dependencies:
     md5 "^2.2.1"
 
