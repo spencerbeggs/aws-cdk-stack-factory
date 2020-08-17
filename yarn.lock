@@ -1541,10 +1541,17 @@
     "@aws-cdk/core" "1.58.0"
     constructs "^3.0.2"
 
-"@aws-cdk/cfnspec@1.58.0", "@aws-cdk/cfnspec@^1.58.0":
+"@aws-cdk/cfnspec@1.58.0":
   version "1.58.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.58.0.tgz#11390f70f9ff81d6881e1d06e8aabae5bccbf66e"
   integrity sha512-ChOJagv2mhvcYXsjUJUC+8//Upzv+ZU1UjH/B2k0Izgkghq+CB2yCcjYQGr/KgRygTvsDRVKXiGjKBBl0kcSKQ==
+  dependencies:
+    md5 "^2.2.1"
+
+"@aws-cdk/cfnspec@^1.59.0":
+  version "1.59.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.59.0.tgz#3def54066a718aa6cb25546eef74c70ccf3692b3"
+  integrity sha512-Th296cIiWQk2HTtUoA3Tk/2IoMscb+kQrHTmyvh4VIUfoIR6F3gJXTN5+M4hnV4JOHI7QzVlXFTlveL9zENN4w==
   dependencies:
     md5 "^2.2.1"
 
