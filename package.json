@@ -37,7 +37,7 @@
 		"@types/yargs": "^15.0.5",
 		"@typescript-eslint/eslint-plugin": "^3.9.0",
 		"@typescript-eslint/parser": "^3.9.0",
-		"bent": "^7.3.9",
+		"bent": "^7.3.10",
 		"chalk": "^4.1.0",
 		"change-case": "^4.1.1",
 		"child-process-promise": "^2.2.1",
