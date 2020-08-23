@@ -3,10 +3,10 @@ module.exports = {
 	tabWidth: 2,
 	trailingComma: "all",
 	printWidth: 125,
-	overrides: [
+	"overrides": [
 		{
-			files: ".prettierrc.js",
-			options: { parser: "json" },
-		},
-	],
+			"files": [".prettierrc", ".eslintrc", ".babelrc", "package.json"],
+			"options": { "parser": "json" }
+		}
+	]
 };
