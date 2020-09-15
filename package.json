@@ -212,7 +212,7 @@
 		"@aws-cdk/region-info": "1.60.0",
 		"@monocdk-experiment/assert": "1.60.0",
 		"@monocdk-experiment/rewrite-imports": "1.60.0",
-		"aws-cdk": "1.60.0",
+		"aws-cdk": "1.63.0",
 		"awslint": "1.60.0",
 		"cdk-assets": "1.60.0",
 		"constructs": "^3.0.2",
