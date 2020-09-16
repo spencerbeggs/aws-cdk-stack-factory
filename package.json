@@ -50,7 +50,7 @@
 		"inquirer": "^7.3.3",
 		"lint-staged": "^10.2.11",
 		"lodash": "^4.17.20",
-		"prettier": "^2.0.5",
+		"prettier": "^2.1.2",
 		"source-map-support": "^0.5.19",
 		"ts-jest": "^26.2.0",
 		"ts-node": "^9.0.0",
